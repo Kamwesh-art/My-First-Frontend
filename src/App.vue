@@ -1,0 +1,54 @@
+<template>
+  <v-app>
+    <v-main>
+      <!-- <HelloWorld /> -->
+      <h1>Hello {{name}}!</h1>
+      <h2>Hope that u r well</h2>
+        <v-btn @click="changeName">
+          Change My Name
+        </v-btn>
+        <v-btn @click="becomeSteve">
+          Become Steve 
+        </v-btn>
+        <v-btn @click="becomeKamwesh">
+          Become Kamwesh
+        </v-btn>
+
+      <p>I am studying {{ course }}</p>
+    </v-main>
+    <v-btn
+      class="ma-2"
+      icon="mdi-theme-light-dark"
+      location="top right"
+      position="absolute"
+      @click="$vuetify.theme.cycle()"
+    />
+  </v-app>
+</template>
+
+<script lang="ts" setup>
+  import HelloWorld from '@/components/HelloWorld.vue'
+  import {ref} from 'vue'
+
+  const name=ref("Darling")
+  function changeName() {
+  name.value = "Honey "
+}
+  function becomeSteve(){
+    console.log("The button become Steve was cicked ")
+    name.value = "Steve"
+  }
+  function becomeKamwesh(){
+    console.log("The button become Kamwesh was clicked ")
+    name.value = "Kamwesh"
+  }
+  console.log(name)
+  console.log(name.value)
+  const course="Vue and Vuetify."
+</script>
+<style> 
+h1
+{
+  color:blue;
+}
+</style>
