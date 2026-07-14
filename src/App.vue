@@ -1,7 +1,10 @@
+import StudentCard from '@/components/StudentCard.vue'
+
 <template>
   <v-app>
     <v-main>
       <HelloWorld />
+      <StudentCard/>
       <h1>Hello {{name}}!</h1>
       <h2>Hope that u r well</h2>
         <v-btn @click="changeName">
