@@ -1,11 +1,14 @@
-import StudentCard from '@/components/StudentCard.vue'
 
 <template>
   <v-app>
     <v-main>
       <HelloWorld />
-      <StudentCard/>
       <h1>Hello {{name}}!</h1>
+      <StudentCard 
+      :name="name" 
+      :course="course"
+      :age="age"/>
+      
       <h2>Hope that u r well</h2>
         <v-btn @click="changeName">
           Change My Name
@@ -17,8 +20,9 @@ import StudentCard from '@/components/StudentCard.vue'
           Become Kamwesh
         </v-btn>
 
-      <p>I am studying {{ course }}</p>
+      <h2>I am studying {{ course }}</h2>
       <h2>I am {{ age }} years old</h2>
+      <!-- <StudentCard />       -->
        <v-text-field
         label="Enter your name"
         v-model="name"
@@ -48,6 +52,7 @@ import StudentCard from '@/components/StudentCard.vue'
 <script lang="ts" setup>
   import HelloWorld from '@/components/HelloWorld.vue'
   import {ref} from 'vue'
+  import StudentCard from '@/components/StudentCard.vue'
 
   const name=ref("Darling")
   function changeName() {
