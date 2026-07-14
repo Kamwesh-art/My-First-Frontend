@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <!-- <HelloWorld /> -->
+      <HelloWorld />
       <h1>Hello {{name}}!</h1>
       <h2>Hope that u r well</h2>
         <v-btn @click="changeName">
@@ -15,6 +15,22 @@
         </v-btn>
 
       <p>I am studying {{ course }}</p>
+      <h2>I am {{ age }} years old</h2>
+       <v-text-field
+        label="Enter your name"
+        v-model="name"
+        ></v-text-field>
+
+        <v-text-field
+        label="Enter course name"
+        v-model="course">
+        </v-text-field>
+
+        <v-text-field
+        label="Enter your age"
+        v-model="age">
+      </v-text-field>
+
     </v-main>
     <v-btn
       class="ma-2"
@@ -44,7 +60,10 @@
   }
   console.log(name)
   console.log(name.value)
-  const course="Vue and Vuetify."
+  // const course="Vue and Vuetify."
+
+  const course=ref("BBIT")
+  const age=ref(20)
 </script>
 <style> 
 h1
