@@ -4,12 +4,12 @@
     <v-main>
       <HelloWorld />
       <h1>Hello {{name}}!</h1>
+      <h2>Hope that u r well</h2>
       <StudentCard 
       :name="name" 
       :course="course"
       :age="age"/>
-      
-      <h2>Hope that u r well</h2>
+    
         <v-btn @click="changeName">
           Change My Name
         </v-btn>
@@ -22,7 +22,6 @@
 
       <h2>I am studying {{ course }}</h2>
       <h2>I am {{ age }} years old</h2>
-      <!-- <StudentCard />       -->
        <v-text-field
         label="Enter your name"
         v-model="name"
@@ -71,7 +70,9 @@
   // const course="Vue and Vuetify."
 
   const course=ref("BBIT")
+  console.log(course.value)
   const age=ref(20)
+  console.log(age.value)
 </script>
 <style> 
 h1

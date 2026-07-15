@@ -1,9 +1,9 @@
 <template>
     <div>
         <h2>Student Profile</h2>
-        <p>Name: {{name}} </p>
-        <p>Course: {{course}}</p>
-        <p>Age: {{age}}</p>
+        <p>Name: {{props.name}} </p>
+        <p>Course: {{props.course}}</p>
+        <p>Age: {{props.age}}</p>
     </div>
 
 </template>
@@ -14,6 +14,5 @@ const props = defineProps({
     course: String,
     age: Number,
 })
-
 
 </script>
