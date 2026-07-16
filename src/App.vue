@@ -24,18 +24,28 @@
       <h2>I am {{ age }} years old</h2>
        <v-text-field
         label="Enter your name"
+        variant="solo"
         v-model="name"
         ></v-text-field>
 
         <v-text-field
         label="Enter course name"
+        variant="filled"
         v-model="course">
         </v-text-field>
 
         <v-text-field
         label="Enter your age"
+        variant="outlined"
         v-model="age">
       </v-text-field>
+
+        <v-btn variant="elevated">Elevated</v-btn>
+        <v-btn variant="flat">Flat</v-btn>
+        <v-btn variant="tonal">Tonal</v-btn>
+        <v-btn variant="outlined">Outlined</v-btn>
+        <v-btn variant="text" >Text</v-btn>
+        <v-btn variant="plain">Plain</v-btn>
 
     </v-main>
     <v-btn
@@ -45,6 +55,8 @@
       position="absolute"
       @click="$vuetify.theme.cycle()"
     />
+
+
   </v-app>
 </template>
 
@@ -58,7 +70,7 @@
   name.value = "Honey "
 }
   function becomeSteve(){
-    console.log("The button become Steve was cicked ")
+    console.log("The button become Steve was clicked ")
     name.value = "Steve"
   }
   function becomeKamwesh(){
@@ -78,5 +90,6 @@
 h1
 {
   color:blue;
+  text-align:center;
 }
 </style>
